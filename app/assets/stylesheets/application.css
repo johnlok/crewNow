@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: 'Aileron-Light';
+  src: url('Aileron-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Aileron-BlackItalic';
+  src: url('Aileron-BlackItalic.otf') format('opentype');
+}
+
+h1 {
+  font-family: 'Aileron-BlackItalic';
+  font-size: 10.0em;
+}
