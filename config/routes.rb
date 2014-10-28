@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  get '/trips/show/:race' => 'trips#crewboard'
+  get '/trips/race/:race' => 'trips#crewboard'
   resources :trips
   root 'welcome#index'
   get '/races/' => 'race#show'
+  get '/create/user/' => 'user#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

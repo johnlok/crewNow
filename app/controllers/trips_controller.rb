@@ -12,8 +12,9 @@ class TripsController < ApplicationController
   end
 
   def crewboard
-    @racename = params[:race]
-    @crew_board = Trip.where(trip_description:@racename)
+    # @racename = params[:race]
+    @race_to_show = params[:race]
+    @crew_board = Trip.where(race_id:@race_to_show)
     #getting the objects for that particular race
   end
 
