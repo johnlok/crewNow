@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027085604) do
+ActiveRecord::Schema.define(version: 20141028103212) do
 
   create_table "races", force: true do |t|
     t.datetime "race_date"
@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20141027085604) do
     t.string   "trip_description"
     t.integer  "trip_attendees"
     t.integer  "trip_attendee_limit"
-    t.integer  "race_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "race_id"
   end
 
   create_table "users", force: true do |t|

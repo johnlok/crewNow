@@ -1,11 +1,15 @@
 <div class="row">
-  <div class="col-xs-12 text-center">
+  <div class="col-md-12 text-center">
     <h1>Crew Now</h1>
   </div>
   <div class="row skipper-start">
-    <a href="#"> <img class="img-responsive beginning-margin" src="/assets/skipperstart.png"></a>
+    <div class="col-md-8 col-md-offset-2">
+    <%= link_to image_tag("skipperstart.png", :class => 'img-responsive beginning-margin'), {:action => 'show', :controller => 'race'} %>
+    </div>
   </div>
   <div class="row crew-start">
-    <a href="#"><img class="img-responsive" src="/assets/crewstart.png"></a>
+    <div class="col-md-8 col-md-offset-2">
+    <%= link_to image_tag("crewstart.png", :class => 'img-responsive'), {:action => 'show', :controller => 'race'} %>
+    </div>
   </div>
 </div>

@@ -26,10 +26,16 @@
 
 h1 {
   font-family: 'Aileron-BlackItalic';
-  font-size: 10.0em;
 }
 
 h2 {
   font-family: 'Aileron-BlackItalic';
-  font-size: 3.0em;
+}
+
+body {
+  font-family: 'Aileron-Light';
+}
+
+table {
+  font-family: 'Aileron-Light';
 }

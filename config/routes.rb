@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  get '/trips/show/:race' => 'trips#crewboard'
   resources :trips
   root 'welcome#index'
   get '/races/' => 'race#show'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

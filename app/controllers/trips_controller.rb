@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  respond_to :html, :xml, :json
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -7,7 +8,13 @@ class TripsController < ApplicationController
   end
 
   def show
-    respond_with(@trip)
+    respond_with(@trips)
+  end
+
+  def crewboard
+    @racename = params[:race]
+    @crew_board = Trip.where(trip_description:@racename)
+    #getting the objects for that particular race
   end
 
   def new
