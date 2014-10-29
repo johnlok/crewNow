@@ -3,6 +3,7 @@ class TripsController < ApplicationController
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
   def testpost
+    @paramaters = params
   end
 
   def index
@@ -15,7 +16,7 @@ class TripsController < ApplicationController
   end
 
   def crewboard
-    # @racename = params[:race]
+    @new_crew = CrewMember.new
     @race_to_show = params[:race]
     @crew_board = Trip.where(race_id:@race_to_show)
     #getting the objects for that particular race

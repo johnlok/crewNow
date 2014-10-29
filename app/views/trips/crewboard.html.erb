@@ -8,6 +8,7 @@
     <h2><%= Race.find_by_id(@race_to_show).race_name %></h2>
   </div>
 </div>
+<form action = "test" method = "post">
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
   <p>These boats still need crew. Please select the boat you would like to crew on. If unsure or new, select all.</p>
@@ -21,7 +22,8 @@
             <tr>
               <td><%= trip.boat_name %></td>
               <td><%= trip.trip_attendees %></td>
-              <td><%= hidden_field_tag :select_trip_"#{trip.id}", '' %> <%= check_box_tag :select_trip, checked = 'true' %></td>
+              <td><input type="checkbox" id="select_trip_<%= trip.id %>" name="select_trip_<%= trip.id %>"></td>
+
             </tr>
         <% end %>
     </table>
@@ -29,6 +31,24 @@
 </div>
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-     <%= submit_tag "Submit", class:"btn btn-large btn-success" %>
+    <div class="field">
+      <label for="new_crew_member_name">Name</label>
+     <input type="text" id="new_crew_member_name" name="new_crew_member_name">
+    </div>
+    <div class="field">
+      <label for="new_crew_member_email">Email</label>
+     <input type="email" id="new_crew_member_email" name="new_crew_member_email">
+    </div>
+    <div class="field">
+      <label for="new_crew_member_tel">Telephone</label>
+     <input type="tel" id="new_crew_member_tel" name="new_crew_member_tel">
+    </div>
+    <div class="field">
+      <label for="new_crew_member_notifications">Send me notifications about upcoming races</label>
+     <input type="checkbox" id="new_crew_member_notifications" name="new_crew_member_notifications">
+    </div>
+    <input type="submit" id="submit_new_crew" name="submit_new_crew">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
   </div>
 </div>
+</form>

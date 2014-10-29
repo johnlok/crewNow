@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/races/' => 'race#show'
   get '/create/user/' => 'user#create'
-  post '/trips/race/:race' => 'trips#testpost'
+  post '/trips/race/test' => 'trips#testpost'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
