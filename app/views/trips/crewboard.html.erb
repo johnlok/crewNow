@@ -22,7 +22,7 @@
             <tr>
               <td><%= trip.boat_name %></td>
               <td><%= trip.trip_attendees %></td>
-              <td><input type="checkbox" id="select_trip_<%= trip.id %>" name="select_trip_<%= trip.id %>" value="true"></td>
+              <td><input type="checkbox" id="select_trip_<%= trip.id %>" name="select_trip_<%= trip.id %>" value="<%= trip.id %>"></td>
 
             </tr>
         <% end %>
@@ -52,7 +52,8 @@
      <input type="checkbox" id="new_crew_member_notifications" name="new_crew_member_notifications" value="true">
     </div>
     <input type="submit" id="submit_new_crew" name="submit_new_crew">
-    <input name="raceinformation" type="hidden" value="<%= Race.find_by_id(@race_to_show).race_name %>">
+    <input name="racetitle" type="hidden" value="<%= Race.find_by_id(@race_to_show).race_name %>">
+    <input name="raceinformation" type="hidden" value="<%= @race_to_show %>">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
   </div>
 </div>
