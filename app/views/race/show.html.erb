@@ -9,7 +9,7 @@
           <td><%= Date::MONTHNAMES[race.race_date.month] %></td>
           <td><%= race.race_date.day %></td>
           <td><%= Date::DAYNAMES[race.race_date.wday] %></td>
-          <td><%= race.race_name %></td>
+          <td><%= link_to race.race_name, "/trips/race/#{race.id}" %></td>
         </tr>
     <% end %>
     </table>
