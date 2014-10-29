@@ -1,5 +1,5 @@
 class Trip < ActiveRecord::Base
+  has_many :triprelationships
+  has_many :crewmembers, :through => :triprelationships
   belongs_to :race
-  has_many :tripcrewrelationships
-  has_many :crewmembers, :through => :tripcrewrelationships
 end

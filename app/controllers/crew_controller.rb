@@ -21,7 +21,7 @@ class CrewController < ApplicationController
       end
     end
     @crewtrips.each do |trip|
-      relationship = TripCrewRelationship.new(trip_id: trip, crewmember_id: crewid, status: "available")
+      relationship = TripRelationship.new(trip_id: trip, crewmember_id: crewid, status: "available")
       relationship.save
     end
   end
