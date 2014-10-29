@@ -9,7 +9,6 @@ class CrewController < ApplicationController
     notifications = params[:new_crew_member_notifications]
     tel = params[:new_crew_member_tel]
     bio = params[:new_crew_member_bio]
-    binding.pry
     CrewMember.create(name: name, email: email, tel: tel, bio: bio, notifications: notifications)
   end
 end
