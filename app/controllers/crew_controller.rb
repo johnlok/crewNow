@@ -1,4 +1,6 @@
 class CrewController < ApplicationController
+  #next thing to do is to add crewmembers to trips that they have selected.
+
   def crewsubmit
     @crew_params = params
     @raceinformation = params[:raceinformation]
