@@ -21,7 +21,7 @@
             <tr>
               <td><%= trip.boat_name %></td>
               <td><%= trip.trip_attendees %></td>
-              <td><%= check_box_tag(:select_crew) %></td>
+              <td><%= hidden_field_tag :select_trip, '' %> <%= check_box_tag :select_trip, checked = 'true' %></td>
             </tr>
         <% end %>
     </table>
@@ -29,6 +29,6 @@
 </div>
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <button>I'm available</button>
+     <%= submit_tag "Submit", class:"btn btn-large btn-success" %>
   </div>
 </div>
