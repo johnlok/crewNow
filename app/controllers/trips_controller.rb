@@ -2,10 +2,6 @@ class TripsController < ApplicationController
   respond_to :html, :xml, :json
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
-  def testpost
-    @paramaters = params
-  end
-
   def index
     @trips = Trip.all
     respond_with(@trips)
