@@ -6,8 +6,6 @@ class CreateCrewMembers < ActiveRecord::Migration
       t.string :tel
       t.text :bio
       t.boolean :notifications
-      t.boolean :confirmed
-      t.boolean :available
 
       t.timestamps
     end

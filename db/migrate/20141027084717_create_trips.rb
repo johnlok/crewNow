@@ -6,7 +6,6 @@ class CreateTrips < ActiveRecord::Migration
       t.string :trip_description
       t.integer :trip_attendees
       t.integer :trip_attendee_limit
-      t.integer :race_id
 
       t.timestamps
     end
