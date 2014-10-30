@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029141701) do
+ActiveRecord::Schema.define(version: 20141030005758) do
 
   create_table "crew_members", force: true do |t|
     t.string   "name"
@@ -19,11 +19,8 @@ ActiveRecord::Schema.define(version: 20141029141701) do
     t.string   "tel"
     t.text     "bio"
     t.boolean  "notifications"
-    t.boolean  "confirmed"
-    t.boolean  "available"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "trip_id"
   end
 
   create_table "races", force: true do |t|
