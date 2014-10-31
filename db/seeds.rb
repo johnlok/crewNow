@@ -22,6 +22,9 @@ t4 = Trip.create boat_name: "Phoenix", trip_organizer: nil, trip_description: "J
 
 c1 = CrewMember.create name: 'John', email: 'john@lok.com', tel: 12345678, bio: 'abc'
 c2 = CrewMember.create name: 'Harry', email: 'harry@potter.com', tel: 12345678, bio: 'def'
+c3 = CrewMember.create name: 'Stephen', email: 'stephen@gray.com', tel: 12345678, bio: 'ghi'
+c4 = CrewMember.create name: 'Fiona', email: 'fiona@you.com', tel: 12345678, bio: 'jkl'
+c5 = CrewMember.create name: 'Astrid', email: 'astrid@large.com', tel: 12345678, bio: 'mno'
 
 TripRelationship.create trip: t1, crew_member: c1, status: 'confirmed'
 TripRelationship.create trip: t1, crew_member: c2, status: 'confirmed'

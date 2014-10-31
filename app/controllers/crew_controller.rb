@@ -12,7 +12,7 @@ class CrewController < ApplicationController
     newcrew = CrewMember.new(name: name, email: email, tel: tel, bio: bio, notifications: notifications)
     newcrew.save
     crewid = newcrew.id
-    binding.pry
+    # binding.pry
     #the below code grabs the selected trips that the user has selected and puts them into an array.
     @crewtrips = []
     @crew_params.keys.each do |key|
