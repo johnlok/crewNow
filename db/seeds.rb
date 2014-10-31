@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
 Race.create race_date:"2014-11-01 14:00:00", race_name: "Jasmin 2",  race_description: "Jasmin 2", race_location: "Port Shelter"
 Race.create race_date:"2014-11-08 14:00:00", race_name: "Passage Race",  race_description: "Passage Race", race_location: "Port Shelter"
 Race.create race_date:"2014-11-15 14:00:00", race_name: "Lipton Trophy",  race_description: "Lipton Trophy", race_location: "Harbour"
@@ -14,10 +15,14 @@ Race.create race_date:"2014-11-22 14:00:00", race_name: "Passage Race",  race_de
 Race.create race_date:"2014-11-29 14:00:00", race_name: "Class Champs 1",  race_description: "Class Championships", race_location: "Harbour"
 
 
-t1 = Trip.create boat_name: "Black Magic", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 1, trip_attendee_limit: "4", race_id: 2
-t2 = Trip.create boat_name: "Ironman", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 2, trip_attendee_limit: "4", race_id: 2
-t3 = Trip.create boat_name: "Fly By Wire", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 3, trip_attendee_limit: "4", race_id: 2
-t4 = Trip.create boat_name: "Phoenix", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 3, trip_attendee_limit: "4", race_id: 2
+t1 = Trip.create boat_name: "Black Magic", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 1, trip_attendee_limit: "4", race_id: 1, user_id:2
+t2 = Trip.create boat_name: "Ironman", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 2, trip_attendee_limit: "4", race_id: 1, user_id:3
+t3 = Trip.create boat_name: "Fly By Wire", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 3, trip_attendee_limit: "4", race_id: 1, user_id:1
+t4 = Trip.create boat_name: "Phoenix", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 3, trip_attendee_limit: "4", race_id: 1, user_id:1
+t5 = Trip.create boat_name: "Black Magic", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 1, trip_attendee_limit: "4", race_id: 2, user_id:2
+t6 = Trip.create boat_name: "Ironman", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 2, trip_attendee_limit: "4", race_id: 2, user_id:3
+t7 = Trip.create boat_name: "Fly By Wire", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 3, trip_attendee_limit: "4", race_id: 2, user_id:1
+t8 = Trip.create boat_name: "Phoenix", trip_organizer: nil, trip_description: "Jasmin 2", trip_attendees: 3, trip_attendee_limit: "4", race_id: 2, user_id:1
 
 c1 = CrewMember.create name: 'John', email: 'john@lok.com', tel: 12345678, bio: 'John the sailor.'
 c2 = CrewMember.create name: 'Harry', email: 'harry@potter.com', tel: 12345678, bio: 'Harry the sailor'
