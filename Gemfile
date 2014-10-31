@@ -6,7 +6,7 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 #postgres for production
-group: :production
+group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
