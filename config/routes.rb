@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/races/' => 'race#show'
   get '/create/user/' => 'user#create'
   post '/trips/race/submit' => 'crew#crewsubmit'
+  get '/crewmanager' => 'skipper#crewmanager'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

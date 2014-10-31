@@ -2,6 +2,7 @@ class TripsController < ApplicationController
   respond_to :html, :xml, :json
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
+
   def index
     @trips = Trip.all
     respond_with(@trips)

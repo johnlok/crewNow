@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+    <h1>Crew Manager</h1>
+    <% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <% else %>
+  <%= link_to('Login', new_user_session_path)  %>
+<% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h2>Your next race: <%= Race.first.race_name %></h2>
+    <p>The current user email is: <%= current_user.email %> and their id is <%= current_user.id %> their boat is <%= @trip.boat_name %></p>
+    <p>The current trip is <%= @trip.id %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Confirmed Crew</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Regular Crew</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>Available Crew</h3>
+    <table class="table">
+      <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Tel</td>
+          <td>Bio</td>
+        </tr>
+      <% @available_crew.each do |crew| %>
+        <tr>
+          <td><%= crew.name %></td>
+          <td><%= crew.email %></td>
+          <td><%= crew.tel %></td>
+          <td><%= crew.bio %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
