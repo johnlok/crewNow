@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'letter_opener'
 # Devise - user management
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#postgres for production
+gem 'pg', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -14,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
+gem 'letter'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -28,7 +29,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background.
   #> https://github.com/rails/spring
   gem 'spring'
-
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
   # Better Errors replaces the standard Rails error page with a much better and more useful error page.
   #> https://github.com/charliesome/better_errors
   gem 'better_errors'
