@@ -8,18 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
 
-<%= yield %>
+  <div class="container">
+    <%= render 'layouts/alerts' %>
 
-</div>
-<%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' => true %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= yield %>
+  </div>
+
+  <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

@@ -9,7 +9,7 @@ class SkipperController < ApplicationController
   def crewconfirm
     @trip = current_user.trips.first
     @confirmparams = params
-    @crewtoconfirm = []
+    @crewtoconfirm = [] #ids of the crew to confirm
     @confirmparams.keys.each do |key|
       if key.start_with?('confirm_')
         @crewtoconfirm << @confirmparams[key]
@@ -18,6 +18,12 @@ class SkipperController < ApplicationController
     @crewtoconfirm.each do |crew|
       TripRelationship.where(crew_member_id:crew,trip_id:@trip.id).first.update(status: "confirmed")
     end
+
+
+
+
+
+  # UserMailer.confirmation_email(current_user).deliver
   end
 
 end

@@ -4,6 +4,7 @@ class TripsController < ApplicationController
 
 
   def index
+    flash[:notice] = "hi johnnn"
     @trips = Trip.all
     respond_with(@trips)
   end
@@ -14,9 +15,9 @@ class TripsController < ApplicationController
 
   def crewboard
     @new_crew = CrewMember.new
-    @race_to_show = params[:race]
-    @crew_board = Trip.where(race_id:@race_to_show)
-    #getting the objects for that particular race
+    @race_to_show = Race.find params[:race]
+    # getting the objects for that particular race
+    @crew_board = Trip.where(race: @race_to_show)
   end
 
   # POST /trips/race/2/confirm
@@ -43,8 +44,12 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
-    @trip.save
-    respond_with(@trip)
+    # TODO: Save may not save!!!
+    if @trip.save
+      respond_with(@trip)
+    else
+      flash[:error] = 'ohhh nooo!!'
+    end
   end
 
   def update

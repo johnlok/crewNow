@@ -3,58 +3,61 @@
     <h1>Crew Board</h1>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <h2><%= Race.find_by_id(@race_to_show).race_name %></h2>
-  </div>
-</div>
-<form action = "submit" method = "post">
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-  <p>These boats still need crew. Please select the boat you would like to crew on. If unsure or new, select all.</p>
-    <table class="table">
-        <tr>
-          <td>Boat Name</td>
-          <td>Crew Status</td>
-          <td>Select</td>
-        </tr>
-        <% @crew_board.each do |trip| %>
-            <tr>
-              <td><%= trip.boat_name %></td>
-              <td><%= trip.trip_attendees %></td>
-              <td><input type="checkbox" id="select_trip_<%= trip.id %>" name="select_trip_<%= trip.id %>" value="<%= trip.id %>"></td>
 
-            </tr>
-        <% end %>
-    </table>
-  </div>
-</div>
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <div class="field">
-      <label for="new_crew_member_name">Name</label>
-     <input type="text" id="new_crew_member_name" name="new_crew_member_name">
-    </div>
-    <div class="field">
-      <label for="new_crew_member_email">Email</label>
-     <input type="email" id="new_crew_member_email" name="new_crew_member_email">
-    </div>
-    <div class="field">
-      <label for="new_crew_member_tel">Telephone</label>
-     <input type="tel" id="new_crew_member_tel" name="new_crew_member_tel">
-    </div>
-    <div class="field">
-      <label for="new_crew_member_tel">Bio</label>
-     <input type="text" id="new_crew_member_bio" name="new_crew_member_bio">
-    </div>
-    <div class="field">
-      <label for="new_crew_member_notifications">Send me notifications about upcoming races</label>
-     <input type="checkbox" id="new_crew_member_notifications" name="new_crew_member_notifications" value="true">
-    </div>
-    <input type="submit" id="submit_new_crew" name="submit_new_crew">
-    <input name="racetitle" type="hidden" value="<%= Race.find_by_id(@race_to_show).race_name %>">
-    <input name="raceinformation" type="hidden" value="<%= @race_to_show %>">
-    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+    <h2><%= @race_to_show.race_name %></h2>
   </div>
 </div>
+
+<form action = "submit" method = "post">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    <p>These boats still need crew. Please select the boat you would like to crew on. If unsure or new, select all.</p>
+      <table class="table">
+          <tr>
+            <td>Boat Name</td>
+            <td>Crew Status</td>
+            <td>Select</td>
+          </tr>
+          <% @crew_board.each do |trip| %>
+              <tr>
+                <td><%= trip.boat_name %></td>
+                <td><%= trip.trip_attendees %></td>
+                <td><input type="checkbox" id="select_trip_<%= trip.id %>" name="select_trip_<%= trip.id %>" value="<%= trip.id %>"></td>
+
+              </tr>
+          <% end %>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="field">
+        <label for="new_crew_member_name">Name</label>
+       <input type="text" id="new_crew_member_name" name="new_crew_member_name">
+      </div>
+      <div class="field">
+        <label for="new_crew_member_email">Email</label>
+       <input type="email" id="new_crew_member_email" name="new_crew_member_email">
+      </div>
+      <div class="field">
+        <label for="new_crew_member_tel">Telephone</label>
+       <input type="tel" id="new_crew_member_tel" name="new_crew_member_tel">
+      </div>
+      <div class="field">
+        <label for="new_crew_member_tel">Bio</label>
+       <input type="text" id="new_crew_member_bio" name="new_crew_member_bio">
+      </div>
+      <div class="field">
+        <label for="new_crew_member_notifications">Send me notifications about upcoming races</label>
+       <input type="checkbox" id="new_crew_member_notifications" name="new_crew_member_notifications" value="true">
+      </div>
+      <input type="submit" id="submit_new_crew" name="submit_new_crew">
+      <input name="racetitle" type="hidden" value="<%= @race_to_show.race_name %>">
+      <input name="raceinformation" type="hidden" value="<%= @race_to_show %>">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" >
+    </div>
+  </div>
 </form>
