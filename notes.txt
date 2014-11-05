@@ -1,0 +1,16 @@
+stuff to do for the website:
+
+create landing page to collect user info (mating)
+
+create logic to count number of available crew.
+
+add more races (easy)
+
+create logic to create trips (hard, think of a solution)
+	- you could let the skipper do it
+	- you could do it and get people to join, then let the skipper see the crew available.
+
+create the email function to send people notification emails
+
+cron job to delete old races
+

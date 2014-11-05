@@ -1,0 +1,27 @@
+stuff to do for the website:
+
+create landing page to collect user info (mkting)
+	-remember to download eliot’s video
+	-get a video editing suite that doesn’t cost an arm and a leg (and download it)
+
+
+create logic to count number of available crew.
+	- this could be done by having a “max crew” attribute in the Trip class with some logic being like Trip.max_attendees - CrewMember.count cannot = 0
+
+
+create logic to create trips (hard, think of a solution)
+	- you could let the skipper do it
+	- you could do it and get people to join, then let the skipper see the crew available.
+	- you could also have a button for people who are not sure. select available for all available trips on that day.
+
+
+implement error pages, think of possible places where errors could pop up.
+
+Think about how skippers/boatowners interact with crew.
+
+Crew are likely to sign up. It costs them nothing. 
+
+create the email function to send people notification emails
+
+cron job to delete old races
+
