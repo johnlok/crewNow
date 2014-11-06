@@ -13,6 +13,8 @@ create logic to create trips (hard, think of a solution)
 	- you could let the skipper do it
 	- you could do it and get people to join, then let the skipper see the crew available.
 	- you could also have a button for people who are not sure. select available for all available trips on that day.
+	- how to connect accounts with skippers?
+	- perhaps get their boat name and connect it with the trip name.
 
 
 implement error pages, think of possible places where errors could pop up.
@@ -24,4 +26,6 @@ Crew are likely to sign up. It costs them nothing.
 create the email function to send people notification emails
 
 cron job to delete old races
+	- created first part (rake task)
+	- now to create cron job (but I can wait to do this until I put it on a permanent server)
 
