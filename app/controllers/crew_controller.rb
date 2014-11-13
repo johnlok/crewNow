@@ -1,5 +1,4 @@
 class CrewController < ApplicationController
-  #next thing to do is to add crewmembers to trips that they have selected.
 
   def crewsubmit
     @crew_params = params
@@ -10,7 +9,12 @@ class CrewController < ApplicationController
     tel = params[:new_crew_member_tel]
     bio = params[:new_crew_member_bio]
     newcrew = CrewMember.new(name: name, email: email, tel: tel, bio: bio, notifications: notifications)
-    newcrew.save
+    if newcrew.valid?
+      newcrew.save
+    else
+      binding.pry
+    end
+
     crewid = newcrew.id
     # binding.pry
     #the below code grabs the selected trips that the user has selected and puts them into an array.

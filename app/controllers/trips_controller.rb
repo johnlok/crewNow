@@ -4,7 +4,7 @@ class TripsController < ApplicationController
 
 
   def index
-    flash[:notice] = "hi johnnn"
+    flash[:notice] = "hi john"
     @trips = Trip.all
     respond_with(@trips)
   end
@@ -14,10 +14,10 @@ class TripsController < ApplicationController
   end
 
   def crewboard
-    @new_crew = CrewMember.new
     @race_to_show = Race.find params[:race]
-    # getting the objects for that particular race
+    # getting the trips for that particular race
     @crew_board = Trip.where(race: @race_to_show)
+    #each trip has a race number associated with it.
   end
 
   # POST /trips/race/2/confirm
@@ -43,6 +43,7 @@ class TripsController < ApplicationController
   end
 
   def create
+    binding.pry
     @trip = Trip.new(trip_params)
     # TODO: Save may not save!!!
     if @trip.save

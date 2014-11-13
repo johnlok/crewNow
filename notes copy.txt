@@ -9,7 +9,7 @@ create logic to count number of available crew.
 	- this could be done by having a “max crew” attribute in the Trip class with some logic being like Trip.max_attendees - CrewMember.count cannot = 0
 
 
-create logic to create trips (hard, think of a solution)
+*** create logic to create trips (hard, think of a solution)
 	- you could let the skipper do it
 	- you could do it and get people to join, then let the skipper see the crew available.
 	- you could also have a button for people who are not sure. select available for all available trips on that day.
@@ -17,15 +17,33 @@ create logic to create trips (hard, think of a solution)
 	- perhaps get their boat name and connect it with the trip name.
 
 
-implement error pages, think of possible places where errors could pop up.
+** implement error pages, think of possible places where errors could pop up.
+	- what is respond_with and how does it work?
+	- how to make errors pop up on the page that the user sees?
 
-Think about how skippers/boatowners interact with crew.
+* Think about how skippers/boatowners interact with crew.
 
-Crew are likely to sign up. It costs them nothing. 
+* Crew are likely to sign up. It costs them nothing. 
 
-create the email function to send people notification emails
+*** create the email function to send people notification emails
 
 cron job to delete old races
-	- created first part (rake task)
-	- now to create cron job (but I can wait to do this until I put it on a permanent server)
+	- created first part (rake task) *
+	- now to create cron job (but I can wait to do this until I put it on a permanent server) *
+
+notes:
+
+object.save will return true or false
+object.valid? will return true or false
+
+respond_with will give you a response depending on the mime type requested (doesn’t really tell me anything). Also there are some “default” behaviours which are kind of annoying and have to be overridden if you want anything.
+
+how to implement error pages without the form helper? How to reroute any invalid records??
+
+http://archive.railsforum.com/viewtopic.php?id=717
+http://guides.rubyonrails.org/active_record_validations.html#displaying-validation-errors-in-views
+http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html
+http://apidock.com/rails/ActionController/MimeResponds/respond_with
+http://blog.plataformatec.com.br/2009/08/embracing-rest-with-mind-body-and-soul/
+
 
