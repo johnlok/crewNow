@@ -1,28 +1,7 @@
-== README
+== Crew Now
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Originally a system conceived to help people meet each other, it seems that sailors have their own ways of finding crew. Work has stalled on this project. However, not all was lost as a good understanding of models, one to many and many to one relationships were explored. Rake tasks were written, validation of the product (in terms of people saying "That would be a great idea! But I won't pay for it!") was received. Perhaps I will come back to review this project at a later date.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Personally after this project it seems that Rails is too slow (unreactive) and still has the paradigm of clicking through endless menus. Not really my thing!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
